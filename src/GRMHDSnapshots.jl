@@ -352,6 +352,9 @@ Interpolate `(rho, velrel, bfield)` at Cartesian position `(x, y, z)`.
 end
 
 include("physics.jl")
+include("synchrotron.jl")
+include("radiative_volume.jl")
+export radiative_volume
 
 Adapt.adapt_structure(to, x::NamedDimsArray) = NamedDimsArray(Adapt.adapt(to, parent(x)), dimnames(x))
 
